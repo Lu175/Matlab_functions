@@ -1,7 +1,7 @@
 %% Lu175
 % Show Process Gauge Bar
 %% How to use this function
-% past_gauge = 101;
+% past_gauge = 101;    % value for line 15
 % for i = 1: N
 %     past_gauge = lu175_showGauge(i, N, past_gauge);
 %     %__________________________________________________
@@ -11,7 +11,7 @@
 
 %% Function
 function current_gage = lu175_showGauge(i, N, past_gauge)
-    gauge = floor( (i/N)*100 );    % 백분율 (소수점 자름)
+    gauge = floor( (i/N)*100 );    % Make percentage (cut percentage under decimal point)
     if (gauge ~= past_gauge)
         clc;
         past_gauge = gauge;
